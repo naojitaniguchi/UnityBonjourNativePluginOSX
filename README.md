@@ -7,7 +7,8 @@ To Use plugin in Unity
 Put BonjourPlugin.bundle to Assets/Plugins on Unity .
 
 Sample Unity C# script, add this script to some Game Object in Unity
---------------------------------------------------------------
+
+```
 using UnityEngine;
 using System.Collections;
 using System;
@@ -29,4 +30,4 @@ public class BonjourPlugin : MonoBehaviour {
 	void Update () {
 	}
 }
-
+```
