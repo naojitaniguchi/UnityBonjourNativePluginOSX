@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		233290A618E03AAD00813E26 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233290A518E03AAD00813E26 /* CoreFoundation.framework */; };
 		233290AC18E03AAD00813E26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 233290AA18E03AAD00813E26 /* InfoPlist.strings */; };
+		233290B518E03B8800813E26 /* BonjourPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 233290B318E03B8800813E26 /* BonjourPlugin.mm */; };
+		233290BB18E0465C00813E26 /* BonjourServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 233290BA18E0465C00813E26 /* BonjourServer.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,10 @@
 		233290A918E03AAD00813E26 /* BonjourPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BonjourPlugin-Info.plist"; sourceTree = "<group>"; };
 		233290AB18E03AAD00813E26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		233290AD18E03AAD00813E26 /* BonjourPlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BonjourPlugin-Prefix.pch"; sourceTree = "<group>"; };
+		233290B318E03B8800813E26 /* BonjourPlugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BonjourPlugin.mm; sourceTree = SOURCE_ROOT; };
+		233290B418E03B8800813E26 /* BonjourPlugin.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourPlugin.pch; sourceTree = SOURCE_ROOT; };
+		233290B918E0465C00813E26 /* BonjourServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BonjourServer.h; path = ../BonjourServer.h; sourceTree = "<group>"; };
+		233290BA18E0465C00813E26 /* BonjourServer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BonjourServer.mm; path = ../BonjourServer.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,10 @@
 		233290A718E03AAD00813E26 /* BonjourPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				233290B918E0465C00813E26 /* BonjourServer.h */,
+				233290BA18E0465C00813E26 /* BonjourServer.mm */,
+				233290B318E03B8800813E26 /* BonjourPlugin.mm */,
+				233290B418E03B8800813E26 /* BonjourPlugin.pch */,
 				233290A818E03AAD00813E26 /* Supporting Files */,
 			);
 			path = BonjourPlugin;
@@ -136,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233290BB18E0465C00813E26 /* BonjourServer.mm in Sources */,
+				233290B518E03B8800813E26 /* BonjourPlugin.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +238,8 @@
 		233290B118E03AAD00813E26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BonjourPlugin/BonjourPlugin-Prefix.pch";
@@ -239,6 +253,8 @@
 		233290B218E03AAD00813E26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BonjourPlugin/BonjourPlugin-Prefix.pch";
